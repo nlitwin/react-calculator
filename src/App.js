@@ -20,6 +20,7 @@ class App extends Component {
 
   render() {
     console.log(JSON.stringify(this.state, null, 2))
+
     return (
       <div className="app">
         <CalculatorDisplay displayValue={this.state.currentValue}/>
@@ -47,6 +48,12 @@ class App extends Component {
         this.setState({
           equation: '',
           lastOperator: '',
+          lastNumber: ''
+        })
+      } else if(calculation.length && lastNumber.length) {
+        this.setState({
+          currentValue: '',
+          equation: calculation.slice(0, lastNumber.length * -1),
           lastNumber: ''
         })
       } else {
@@ -94,9 +101,8 @@ class App extends Component {
         })
       }
     } else { // Button pressed is a number
-
         // []
-        if (currentValue === '') {
+        if (equation === '') {
           this.setState({
             currentValue: buttonValue,
             equation: buttonValue,
@@ -106,7 +112,8 @@ class App extends Component {
           // [2 + ] -> 2 = [2 + 2]
           this.setState({
             currentValue: buttonValue,
-            equation: calculation + buttonValue
+            equation: calculation + buttonValue,
+            lastNumber: buttonValue
           })
         } else {
           // [2 + 2] -> 4 = [2 + 24]
@@ -121,7 +128,7 @@ class App extends Component {
 
   evaluateExpression(equation) {
     equation = equation.replace(/×/gi, '*').replace(/÷/gi, '/')
-    
+
     if (equation[equation.length-1] !== '=') {
       equation = equation.replace(/=/gi, '')
     }
