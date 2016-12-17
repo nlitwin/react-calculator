@@ -24,7 +24,6 @@ const ButtonValues = ({ buttonClick }) => {
       <button className="value" onClick={buttonClick}>0</button>
       <button className="operator" onClick={buttonClick}>=</button>
       <button className="operator" onClick={buttonClick}>+</button>
-
     </div>
   )
 }
