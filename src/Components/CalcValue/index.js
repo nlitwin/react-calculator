@@ -13,17 +13,3 @@ const CalcValue = ({ calcValue }) => {
 }
 
 export default CalcValue
-
-
-// const lastCommand = calculation[calculation.length - 1]
-
-// calculation = calculation.replace(/×/gi, '*').replace(/÷/gi, '/')
-
-// if (lastCommand === '.' || calcOperators.indexOf(lastCommand) > -1) {
-//   calculation = calculation.replace(/.$/, '')
-// }
-
-// if (calculation) {
-//   this.setState({
-//     currentValue: eval(calculation)
-//   })
