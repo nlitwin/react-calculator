@@ -19,8 +19,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(JSON.stringify(this.state, null, 2))
-
     return (
       <div className="app">
         <CalculatorDisplay displayValue={this.state.currentValue}/>
@@ -32,6 +30,7 @@ class App extends Component {
     );
   }
 
+  // TODO: simplify number of variables and create wrapper function for this.setState calls
   calculateValue(event) {
     const { currentValue, equation, lastOperator, lastNumber } = this.state
     const buttonValue = event.target.innerHTML
@@ -41,7 +40,6 @@ class App extends Component {
     const isLastAnOperator = calcOperators.indexOf(
       calculation[calculation.length - 1]) > -1
 
-    // TODO: Make switch statement in the future for better readability
     if (buttonValue === 'delete') {
       // Hitting delete twice resets everything
       if (currentValue === '' && calculation.length) {
@@ -126,6 +124,7 @@ class App extends Component {
     }
   }
 
+  // TODO: Move to helper function outside of App.js
   evaluateExpression(equation) {
     equation = equation.replace(/×/gi, '*').replace(/÷/gi, '/')
 
