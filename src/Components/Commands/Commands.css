@@ -1,0 +1,13 @@
+.commands {
+  height: 25px;
+}
+
+.empty {
+  width: 150px;
+  background: tomato;
+}
+
+.delete-command {
+  height: ;
+  text-transform: uppercase;
+}
