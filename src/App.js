@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CalcValue from './Components/CalcValue'
+import CalculatorDisplay from './Components/CalculatorDisplay'
 import Commands from './Components/Commands'
 import ButtonValues from './Components/ButtonValues'
 import './App.css';
@@ -22,7 +22,7 @@ class App extends Component {
     console.log(JSON.stringify(this.state, null, 2))
     return (
       <div className="app">
-        <CalcValue calcValue={this.state.currentValue}/>
+        <CalculatorDisplay displayValue={this.state.currentValue}/>
 
         <Commands commandClick={this.calculateValue}/>
 
@@ -40,7 +40,7 @@ class App extends Component {
     const isLastAnOperator = calcOperators.indexOf(
       calculation[calculation.length - 1]) > -1
 
-    // Make switch statement in the future for better readability
+    // TODO: Make switch statement in the future for better readability
     if (buttonValue === 'delete') {
       // Hitting delete twice resets everything
       if (currentValue === '' && calculation.length) {
@@ -121,6 +121,10 @@ class App extends Component {
 
   evaluateExpression(equation) {
     equation = equation.replace(/×/gi, '*').replace(/÷/gi, '/')
+    
+    if (equation[equation.length-1] !== '=') {
+      equation = equation.replace(/=/gi, '')
+    }
     return eval(equation)
   }
 }
