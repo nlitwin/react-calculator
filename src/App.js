@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CalcInput from './Components/CalcInput'
-import ButtonOperators from './Components/ButtonOperators'
+import Commands from './Components/Commands'
 import ButtonValues from './Components/ButtonValues'
 import './App.css';
 
@@ -9,7 +9,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      lastOperator: ''
+      lastOperator: '',
       lastValue: 0
     }
   }
@@ -17,10 +17,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <CalcInput />
 
-        <ButtonOperators />
+        <Commands />
 
         <ButtonValues />
       </div>
