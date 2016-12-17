@@ -11,6 +11,10 @@
 ## Tests
 Tests are using the Enzyme library, and are in `src/Components/CalculatorDisplay/index.test.js`
 
+## Known Bugs
+1. Long strings of commands end up giving the wrong result
+2. Hit delete twice to fully clear the calculator state and try out new combinations
+
 ## Additional Scripts
 
 `npm test` launches the test runner in interactive watch mode
