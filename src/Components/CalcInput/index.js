@@ -2,24 +2,28 @@ import React from 'react'
 
 require('./CalcInput.css')
 
-
-class CalcInput extends React.Component {
-  //Future feature: let user type numbers on keyboard and use enter/backspace
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      text: 0
-    }
-  }
-
-  render() {
-    return (
-      <div className="calc-input">
-        <input value={this.state.text} />
-      </div>
-    )
-  }
+const CalcInput = ({ calcValue }) => {
+  calcValue = calcValue.toString()
+  
+  return (
+    <div className="calc-input">
+      {calcValue === '' ? '|' : calcValue.slice(0, 10)}
+    </div>
+  )
 }
 
 export default CalcInput
+
+
+// const lastCommand = calculation[calculation.length - 1]
+
+// calculation = calculation.replace(/×/gi, '*').replace(/÷/gi, '/')
+
+// if (lastCommand === '.' || calcOperators.indexOf(lastCommand) > -1) {
+//   calculation = calculation.replace(/.$/, '')
+// }
+
+// if (calculation) {
+//   this.setState({
+//     currentValue: eval(calculation)
+//   })
