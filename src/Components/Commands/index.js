@@ -2,12 +2,12 @@ import React from 'react'
 
 require('./Commands.css')
 
-const Commands = ({ clickHandler }) => {
+const Commands = ({ commandClick }) => {
   return (
     <div className="commands" >
       <div className="empty" />
 
-      <button className="delete-command">delete</button>
+      <button onClick={commandClick} className="delete-command">delete</button>
     </div>
   )
 }
