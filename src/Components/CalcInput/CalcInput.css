@@ -1,0 +1,8 @@
+.calc-input {
+  width: 220px;
+  font-size: 28px;
+  background: black;
+  text-align: right;
+  outline: none;
+  border: none;
+}
