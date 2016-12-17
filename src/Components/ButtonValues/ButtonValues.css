@@ -8,7 +8,14 @@
   margin-bottom: 3px;
   margin-right: 3px;
   font-size: 28px;
+  font-family: "Droid Sans Mono", sans-serif;
+  font-weight: 300;
   background-color: dimgrey;
   outline: none;
   border: none;
+  color: white;
+}
+
+.operator {
+  background-color: #333333;
 }

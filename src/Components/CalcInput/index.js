@@ -15,7 +15,9 @@ class CalcInput extends React.Component {
 
   render() {
     return (
-      <input className="calc-input" value={this.state.text} />
+      <div className="calc-input">
+        <input value={this.state.text} />
+      </div>
     )
   }
 }
