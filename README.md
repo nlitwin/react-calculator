@@ -3,7 +3,7 @@
 ## Running the app
 
 1. Please use the latest version of Chrome for this application
-2. To get started, clone the repository on your local machine and cd into the directory
+2. To get started, run `git clone https://github.com/nlitwin/react-calculator.git` and cd into the directory
 3. Next, run `npm install`
 4. `npm start` will start the Webpack server
 5. Head over to `http://localhost:3000/` to see the app
