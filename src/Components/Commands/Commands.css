@@ -8,14 +8,13 @@
 .empty {
   display: inline-block;
   height: 25px;
-  width: 150px;
   background: #333333;
   flex: 1;
 }
 
 .delete-command {
   display: inline-block;
-  max-width: 51px;
+  max-width: 50px;
   margin-left: 3px;
   background-color: #333333;
   border: none;
