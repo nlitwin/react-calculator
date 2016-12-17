@@ -8,6 +8,9 @@
 4. `npm start` will start the Webpack server
 5. Head over to `http://localhost:3000/` to see the app
 
+## Tests
+Tests are using the Enzyme library, and are in `src/Components/CalculatorDisplay/index.test.js`
+
 ## Additional Scripts
 
 `npm test` launches the test runner in interactive watch mode
