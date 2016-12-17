@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CalcInput from './Components/CalcInput'
+import CalcValue from './Components/CalcValue'
 import Commands from './Components/Commands'
 import ButtonValues from './Components/ButtonValues'
 import './App.css';
@@ -22,7 +22,7 @@ class App extends Component {
     console.log(JSON.stringify(this.state, null, 2))
     return (
       <div className="app">
-        <CalcInput calcValue={this.state.currentValue}/>
+        <CalcValue calcValue={this.state.currentValue}/>
 
         <Commands commandClick={this.calculateValue}/>
 

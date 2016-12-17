@@ -1,18 +1,18 @@
 import React from 'react'
 
-require('./CalcInput.css')
+require('./CalcValue.css')
 
-const CalcInput = ({ calcValue }) => {
+const CalcValue = ({ calcValue }) => {
   calcValue = calcValue.toString()
-  
+
   return (
-    <div className="calc-input">
+    <div className="calc-value">
       {calcValue === '' ? '|' : calcValue.slice(0, 10)}
     </div>
   )
 }
 
-export default CalcInput
+export default CalcValue
 
 
 // const lastCommand = calculation[calculation.length - 1]
